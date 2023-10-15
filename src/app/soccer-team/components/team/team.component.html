@@ -1,0 +1,20 @@
+<h1>Soccer Team Information</h1>
+<dl>
+  <dt>Name:</dt>
+  <dd>{{teamName}}</dd>
+  <dt>Year of Foundation:</dt>
+  <dd *ngIf="menor1990">{{teamFoundation}}</dd>
+  <dt>League:</dt>
+  <dd>{{teamLeague}}</dd>
+  <dt>Category:</dt>
+  <dd>{{teamCategory}}</dd>
+  <dt>Value:</dt>
+  <dd>{{teamValue}}</dd>
+  <dt>Age:</dt>
+  <dd>{{ teamAge }}</dd>
+  <dt>Capitalized Name:</dt>
+  <dd>{{ getCapitalizedName() }}</dd>
+</dl>
+
+<button type="button" class="btn btn-primary mx-2" (click)="changeTeamName()">Change name</button>
+<button type="button" class="btn btn-primary mx-2" (click)="changeTeamValue()">Change value</button>
