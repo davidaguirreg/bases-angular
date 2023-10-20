@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CounterModule } from './counter/counter.module';
 import { SoccerTeamModule } from './soccer-team/soccer-team.module';
+import { TournamentsModule } from './tournaments/tournaments.module';
 
 import { AppComponent } from './app.component';
+
 
 
 
@@ -15,7 +17,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CounterModule,
-    SoccerTeamModule
+    SoccerTeamModule,
+    TournamentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
