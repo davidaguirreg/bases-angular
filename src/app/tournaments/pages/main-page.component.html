@@ -2,10 +2,10 @@
 <hr>
 <div class="row">
   <div class="col">
-    <app-tournaments-list></app-tournaments-list>
+    <app-tournaments-list [tournamentsList]="tournaments" (onDelete)="onDeleteTournament($event)"></app-tournaments-list>
   </div>
   <div class="col">
-    <app-tournaments-add-team></app-tournaments-add-team>
+    <app-tournaments-add-team (onAddTournament)="onAddedTournament($event)"></app-tournaments-add-team>
   </div>
 
 </div>

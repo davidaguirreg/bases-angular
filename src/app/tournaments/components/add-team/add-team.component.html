@@ -1,8 +1,19 @@
 <h4>Add Team to Tournament</h4>
-<form action="" class="row">
-  <label for="nombreEquipo">Team Name:</label>
-  <input type="text" name="nombreEquipo" id="nombreEquipo" class="form-control-mb2">
-  <label for="categoriaEquipo">Category:</label>
-  <input type="text" name="categoriaEquipo" id="categoriaEquipo" class="form-control-mb2">
-  <input type="submit" value="Add" class="btn btn-primary my-2">
+<form action="" class="row" (ngSubmit)="emitirTorneo()">
+  <label for="nombreTorneo">Torunament Name:</label>
+  <input
+  type="text"
+  [(ngModel)]="tournamentAdd.name"
+  name="nombreTorneo"
+  id="nombreTorneo"
+  class="form-control-mb2">
+  <label for="participantesTorneo">Category:</label>
+  <input
+  type="number"
+  [(ngModel)]="tournamentAdd.participants"
+  name="participantesTorneo"
+  id="participantesTorneo"
+  class="form-control-mb2">
+  <button type="submit" class="btn btn-primary my-2" >Add</button>
 </form>
+<pre>{{tournamentAdd|json}}</pre>

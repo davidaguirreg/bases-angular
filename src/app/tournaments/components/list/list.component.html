@@ -1,6 +1,20 @@
 <h4>Tournament's Teams</h4>
 <ul class="list-group">
-  <li class="list-group-item"> Barcelona - Profesional</li>
-  <li class="list-group-item"> Liga - Profesional</li>
-  <li class="list-group-item"> Nacional - Profesional</li>
+  <li
+  *ngFor="let tournament of tournamentsList;
+  let i = index;
+  let isEven = even;
+  let isOdd = odd;
+  let isFirst = first;
+  let isLast = last"
+  class="list-group-item d-flex justify-content-between align-items-center"
+  [ngClass]="{
+    'list-group-item-primary':isFirst,
+    'list-group-item-success':isOdd,
+    'list-group-item-danger':isLast
+  }"
+  >
+    {{ i+1 }}. {{ tournament.name }} - Participants: {{ tournament.participants }} Par: {{isEven}}
+    <button type="button" class="btn btn-danger" (click)="onDeleteTournament(tournament.id)" >X</button>
+  </li>
 </ul>
